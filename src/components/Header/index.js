@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles'
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/top.png'
+import logo from '../../assets/logo.png'
 import notify from '../../assets/sino.png'
 
 function Header() {

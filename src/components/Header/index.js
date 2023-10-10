@@ -11,17 +11,18 @@ function Header() {
       <S.LeftSide>
         <img src={logo} alt="Logo" />
       </S.LeftSide>
+       
       <S.RightSide>
       <Link to="/">INÍCIO</Link>
         <span className='dividir' />
         
-        <a href='#'>Agendamento</a>
+      <Link to="/agendarexame">Agendar Exames</Link>
         <span className='dividir' />
 
-      <Link to="/agendamentorealizado">Resultados</Link>
+      <Link to="/agendamentorealizado">Agendamentos Realizados</Link>
         <span className='dividir' />
 
-        <a href='#'>Sair</a>
+      <Link to="/">Sair</Link>
         <span className='dividir' />
 
         <a href='#' id='notification'>

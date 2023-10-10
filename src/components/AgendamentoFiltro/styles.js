@@ -11,6 +11,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: background-color 1s ease;
 
     img {
         width: 20px;

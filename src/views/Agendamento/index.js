@@ -2,15 +2,16 @@ import React from 'react';
 import * as S from './styles'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import AgendamentoFiltro from '../../components/AgendamentoFiltro';
 
 
-function ResultadoExame() {
+function Agendamento() {
   return (
     <S.Container>
       <Header/>
 
-      <AgendamentoFiltro/> 
+        <S.Save>
+            <button type="button">SALVAR</button>
+        </S.Save>
       
       <Footer/>
     </S.Container>
@@ -18,4 +19,4 @@ function ResultadoExame() {
   )
 }
 
-export default ResultadoExame;
+export default Agendamento;

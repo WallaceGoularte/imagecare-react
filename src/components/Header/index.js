@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './styles'
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/top.png'
 import notify from '../../assets/sino.png'
@@ -11,12 +12,13 @@ function Header() {
         <img src={logo} alt="Logo" />
       </S.LeftSide>
       <S.RightSide>
-        <a href='#'>Início</a>
+      <Link to="/">INÍCIO</Link>
         <span className='dividir' />
+        
         <a href='#'>Agendamento</a>
         <span className='dividir' />
 
-        <a href='#'>Resultados</a>
+      <Link to="/agendamentorealizado">Resultados</Link>
         <span className='dividir' />
 
         <a href='#'>Sair</a>

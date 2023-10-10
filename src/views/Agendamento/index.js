@@ -1,9 +1,15 @@
 import React from 'react';
+import * as S from './styles'
 import Header from '../../components/Header';
 
 function Agendamento() {
-    return <Header />
-  }
-  
-  export default Agendamento;
-  
+  return (
+    <S.Container>
+      <Header/>
+      
+    </S.Container>
+
+  )
+}
+
+export default Agendamento;

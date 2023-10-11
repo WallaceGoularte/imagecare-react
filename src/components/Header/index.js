@@ -16,13 +16,13 @@ function Header() {
       <Link to="/">INÍCIO</Link>
         <span className='dividir' />
         
-      <Link to="/agendarexame">Agendar Exames</Link>
+      <Link to="/agendarexame">AGENDAR EXAMES</Link>
         <span className='dividir' />
 
-      <Link to="/agendamentorealizado">Agendamentos Realizados</Link>
+      <Link to="/agendamentorealizado">AGENDAMENTOS REALIZADOS</Link>
         <span className='dividir' />
 
-      <Link to="/">Sair</Link>
+      <Link to="/">SAIR</Link>
         <span className='dividir' />
 
         <a href='#' id='notification'>

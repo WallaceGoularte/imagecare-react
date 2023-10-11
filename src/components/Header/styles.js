@@ -18,7 +18,7 @@ export const LeftSide = styled.div`
 
     img {
         width: 15%;
-        height: 60px;
+        height: 75px;
     }
 
 `
@@ -29,7 +29,7 @@ export const RightSide = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 70px;
+    padding-right: 22px;
 
     a {
         color: #FFF;

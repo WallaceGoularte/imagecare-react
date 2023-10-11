@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { format } from 'date-fns';
 import * as S from './styles'
 
 import iconDefault from "../../assets/exame.png";
 
-function AgendamentoCard() {
+function AgendamentoCard({ id, nome, data}) {
+  const date = useMemo(() => format(new Date(data), 'dd/MM/yyyy'));
+  const hour = useMemo(() => format(new Date(data), 'HH:mm'));
+
   return (
     <S.Container>
         <S.TopCard>
           <img src={iconDefault} alt="Icone da Tarefa" />
-          <h3>Titulo Exame</h3>
+          <h3>{nome}</h3>
         </S.TopCard>
 
         <S.BottomCard>
-          <strong>31/03/2024</strong>
-          <span>2:22</span>
+          <strong>{date}</strong>
+          <span>{hour}</span>
         </S.BottomCard>
         
     </S.Container>

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from './styles'
+
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -8,12 +10,25 @@ import AgendamentoCard from '../../components/AgendamentoCard';
 
 function AgendamentoRealizado() {
   const [filterActived, setFilterActived] = useState('today');
+  const [agendamentos, setAgendamentos] = useState([]);
+
+  async function carregarAgendamentos() {
+    await api.get(`/agendamento`).then(response => {
+        setAgendamentos(response.data)
+    })
+  }
+
+  useEffect(() => {
+    carregarAgendamentos();
+  }, [filterActived])
+
   return (
     <S.Container>
       <Header/>
+
         <S.FilterArea>
           <button type="button" onClick={() => setFilterActived("all")}>
-            <AgendamentoFiltro title="Todos"  actived={filterActived === 'all'} onClick={() => setFilterActived("all")} />
+            <AgendamentoFiltro title="Todos"  actived={filterActived === 'all'} />
           </button>
 
           <button type="button"  onClick={() => setFilterActived("today")} >
@@ -38,18 +53,15 @@ function AgendamentoRealizado() {
         </S.Title>
 
         <S.Conteudo>
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-          <AgendamentoCard />
-
+        {
+          agendamentos.map(a => (
+            <AgendamentoCard id={a.id} nome={a.exameId.nome} data={a.data} />
+          ))
+        }
         </S.Conteudo>
 
       <Footer/>
+
     </S.Container>
 
   )

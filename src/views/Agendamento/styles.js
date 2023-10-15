@@ -90,7 +90,9 @@ export const Save = styled.div`
         cursor: pointer;
     }
 
-    
+    &:hover {
+      opacity: 0.7;
+    }
 
 
 `

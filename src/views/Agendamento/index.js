@@ -8,6 +8,22 @@ import Footer from "../../components/Footer";
 
 
 function Agendamento() {
+  const [exame, setExame] = useState();
+  const [medico, setMedico] = useState();
+  const [data, setData] = useState();
+  const [hora, setHora] = useState();
+
+  async function Salvar() {
+    await api.post(`/agendamento`, {
+      exame,
+      medico,
+      data: `${data}T${hora}`
+
+    }).then(() =>
+            alert('Exame agendado com sucesso!')
+    )
+  }
+  
   return (
     <S.Container>
       <Header />
@@ -20,34 +36,31 @@ function Agendamento() {
               <span>Exame</span>
           </S.Input>
           <S.Select>
-            <option value="">Selecionar um Exame</option>
+            <option value={exame || ''} onChange={e => setExame(e.target.value)}> Selecionar um Exame </option>
           </S.Select>
 
           <S.Input>
               <span>Médico</span>
           </S.Input>
           <S.Select>
-            <option value="">Selecionar Médico (a)</option>
+            <option value={medico || ''} onChange={e => setMedico(e.target.value)}> Selecionar Médico (a) </option>
           </S.Select>
 
           <S.Input>
               <span>Data</span>
-              <input type="date" placeholder="Data"></input>
+              <input value={data} type="date" placeholder="Data"
+                onChange={e => setData(e.target.value)} />
           </S.Input>
           
           <S.Spacer />
 
           <S.Input>
               <span>Hora</span>
+              <input value={hora} type="time" onChange={e => setHora(e.target.value)} />
           </S.Input>
-          <S.Select>
-              <option value="">Selecionar Hora</option>
-          </S.Select>
-
-
 
           <S.Save>
-            <button type="button">SALVAR</button>
+            <button type="button" onClick={Salvar} >AGENDAR</button>
           </S.Save>
 
       </S.Form>

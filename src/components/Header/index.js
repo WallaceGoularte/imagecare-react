@@ -22,7 +22,7 @@ function Header() {
       <Link to="/agendamentorealizado">AGENDAMENTOS REALIZADOS</Link>
         <span className='dividir' />
 
-      <Link to="/">SAIR</Link>
+      <Link to="/login">SAIR</Link>
         <span className='dividir' />
 
         <a href='#' id='notification'>

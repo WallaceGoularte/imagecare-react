@@ -13,7 +13,7 @@ function AgendamentoRealizado() {
   const [agendamentos, setAgendamentos] = useState([]);
 
   async function carregarAgendamentos() {
-    await api.get(`/agendamento`).then(response => {
+    await api.get(`/agendamento?filtro=${filterActived}`).then(response => {
         setAgendamentos(response.data)
     })
   }

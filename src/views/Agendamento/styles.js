@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div` 
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +30,6 @@ export const Form = styled.div`
     height: 500px;
     margin-bottom: 70px;
 
-
 `
 
 export const Select = styled.select`
@@ -44,7 +42,6 @@ export const Select = styled.select`
     border-radius: 5px;
     margin-bottom: 20px;
     cursor: pointer;
-
 
     &:hover {
         opacity: 0.7;

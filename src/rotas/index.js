@@ -11,7 +11,7 @@ export default function Rotas(){
     <BrowserRouter>
       <Routes>
         <Route path='/login'  element={<Autenticar/>} />
-        <Route path='/'                      element={<Home/>} />
+        <Route path='/home'                      element={<Home/>} />
         <Route path='/agendarexame'          element={<Agendamento/>} />
         <Route path='/agendamentorealizado'  element={<AgendamentoRealizado/>} />
       </Routes>

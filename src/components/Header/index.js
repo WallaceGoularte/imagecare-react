@@ -13,7 +13,7 @@ function Header() {
       </S.LeftSide>
        
       <S.RightSide>
-      <Link to="/">INÍCIO</Link>
+      <Link to="/home">INÍCIO</Link>
         <span className='dividir' />
         
       <Link to="/agendarexame">AGENDAR EXAMES</Link>
